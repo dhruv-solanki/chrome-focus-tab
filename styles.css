@@ -17,8 +17,10 @@ html, body {
 } */
 
 .content {
-    padding: 20px;
-    /* backdrop-filter: blur(10px); */
+    padding: 10px;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    width: 50%;
 }
 
 .content h1 {
@@ -31,6 +33,18 @@ html, body {
     font-weight: bolder;
 }
 
+.quote-container p {
+    margin: 0 auto;
+    /* padding: 0; */
+}
+
+.quote-container #quote {
+    font-size: 1.8em;
+}
+
+.quote-container #author {
+    font-size: 1.3em;
+}
 
 .footer {
     position: fixed;
