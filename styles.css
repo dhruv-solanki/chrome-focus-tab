@@ -1,5 +1,6 @@
 html, body {
     height: 100%;
+    font-family: monospace;
 }
 
 .main-div {
@@ -15,6 +16,22 @@ html, body {
     width: 20%;
 } */
 
+.content {
+    padding: 20px;
+    /* backdrop-filter: blur(10px); */
+}
+
+.content h1 {
+    font-size: 5em;
+    font-weight: bolder;
+}
+
+.content h3 {
+    font-size: 3em;
+    font-weight: bolder;
+}
+
+
 .footer {
     position: fixed;
     bottom: 0;
@@ -29,4 +46,5 @@ html, body {
 .dev-name {
     color: orange;
     font-style: italic;
+    text-decoration: none;
 }
