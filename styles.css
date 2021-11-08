@@ -1,0 +1,32 @@
+html, body {
+    height: 100%;
+}
+
+.main-div {
+    /* height: 49vw; */
+    height: 100%;
+}
+
+/* .content {
+    background-color: orange;
+    padding: 10px;
+    border-radius: 10px;
+    color:black;
+    width: 20%;
+} */
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.heart {
+    color: orange;
+}
+
+.dev-name {
+    color: orange;
+    font-style: italic;
+}
