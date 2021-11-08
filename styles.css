@@ -17,7 +17,7 @@ html, body {
 } */
 
 .content {
-    padding: 10px;
+    padding: 5px;
     backdrop-filter: blur(10px);
     border-radius: 20px;
     width: 50%;
@@ -44,6 +44,7 @@ html, body {
 
 .quote-container #author {
     font-size: 1.3em;
+    font-style: italic;
 }
 
 .footer {
