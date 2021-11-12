@@ -17,9 +17,12 @@ html, body {
 } */
 
 .content {
-    padding: 5px;
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
+    padding: 10px;
+    /* backdrop-filter: blur(20px); */
+    backdrop-filter: brightness(60%);
+    /* backdrop-filter: grayscale(100%); */
+    /* backdrop-filter: saturate(50%); */
+    border-radius: 10px;
     width: 50%;
 }
 
