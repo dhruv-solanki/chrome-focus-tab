@@ -27,12 +27,12 @@ html, body {
 }
 
 .content h1 {
-    font-size: 4em;
+    font-size: 6em;
     font-weight: bolder;
 }
 
 .content h3 {
-    font-size: 2em;
+    font-size: 3em;
     font-weight: bolder;
 }
 
@@ -42,11 +42,11 @@ html, body {
 }
 
 .quote-container #quote {
-    font-size: 1.2em;
+    font-size: 2em;
 }
 
 .quote-container #author {
-    font-size: 0.8em;
+    font-size: 1.6em;
     font-style: italic;
 }
 
@@ -58,7 +58,7 @@ html, body {
 }
 
 .footer h5 {
-    font-size: 0.8em;
+    font-size: 1.6em;
 }
 
 .heart {
