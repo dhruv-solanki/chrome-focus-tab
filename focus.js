@@ -4,10 +4,23 @@ var dateElement = document.getElementById("date");
 var bgImageElement = document.getElementById("unsplash-img");
 
 var quoteElement = document.getElementById("quote");
+var copyQuoteIconElement = document.getElementById("copyQuoteIcon");
 var authorElement = document.getElementById("author");
 
+const copyQuoteToClipboard = () => {
+    var range = document.createRange();
+    range.selectNode(quoteElement);
+    window.getSelection().removeAllRanges(); // clear current selection
+    window.getSelection().addRange(range); // to select text
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges(); // to deselect
+
+    copyQuoteIconElement.innerHTML = "<i class='fa fa-check fa-lg'></i>";
+};
+
 const getBackgroundImage = async () => {
-    var response = await fetch("https://source.unsplash.com/random/1600x900");
+    const apiUrl = "https://source.unsplash.com/random/1600x900";
+    var response = await fetch(apiUrl);
     var imageURL = response.url;
 
     bgImageElement.style.backgroundImage = `url(${imageURL})`;
@@ -16,7 +29,11 @@ const getBackgroundImage = async () => {
 };
 
 const getQuote = async () => {
-    var response = await fetch("https://api.quotable.io/random");
+    const apiUrl = "https://api.quotable.io/random";
+    copyQuoteIconElement.innerHTML = "<i class='fa fa-copy fa-lg'></i>";
+    copyQuoteIconElement.style.visibility = "hidden";
+
+    var response = await fetch(apiUrl);
     var json = await response.json();
 
     var quote = json.content;
@@ -24,6 +41,10 @@ const getQuote = async () => {
 
     quoteElement.innerText = quote;
     authorElement.innerText = author;
+
+    copyQuoteIconElement.style.visibility = "visible";
+    copyQuoteIconElement.onclick = () => copyQuoteToClipboard();
+    copyQuoteIconElement.title = "Copy Quote to Clipboard";
 };
 
 const getTime = () => {

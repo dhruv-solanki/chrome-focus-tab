@@ -38,6 +38,10 @@ body {
     font-style: italic;
 }
 
+#copyQuoteIcon {
+    cursor: pointer;
+}
+
 .footer {
     position: fixed;
     bottom: 0;
