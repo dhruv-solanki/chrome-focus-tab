@@ -1,5 +1,5 @@
 {
-	"manifest_version": 2,
+	"manifest_version": 3,
 	"name": "Focus Tab - Dhruv Solanki",
 	"version": "1.0.0",
 	"description": "Minimal focused new tab everytime.",
@@ -8,8 +8,8 @@
 	"chrome_url_overrides": {
 		"newtab": "index.html"
 	},
-	"permissions": [
-		"storage",
+	"permissions": ["storage"],
+	"host_permissions": [
 		"https://api.quotable.io/random",
 		"https://source.unsplash.com/random/1600x900"
 	],
