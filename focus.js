@@ -4,49 +4,70 @@ var dateElement = document.getElementById("date");
 var bgImageElement = document.getElementById("unsplash-img");
 
 var quoteElement = document.getElementById("quote");
+var copyQuoteIconElement = document.getElementById("copyQuoteIcon");
 var authorElement = document.getElementById("author");
 
-async function getBackgroundImage() {
-	var response = await fetch("https://source.unsplash.com/random/1600x900");
-	var imageURL = response.url;
+const copyQuoteToClipboard = () => {
+    var range = document.createRange();
+    range.selectNode(quoteElement);
+    window.getSelection().removeAllRanges(); // clear current selection
+    window.getSelection().addRange(range); // to select text
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges(); // to deselect
 
-	bgImageElement.style.backgroundImage = `url(${imageURL})`;
-	bgImageElement.style.backgroundRepeat = "no-repeat";
-	bgImageElement.style.backgroundSize = "cover";
-}
+    copyQuoteIconElement.innerHTML = "<i class='fa fa-check fa-lg'></i>";
+};
 
-async function getQuote() {
-	var response = await fetch("https://api.quotable.io/random");
-	var json = await response.json();
+const getBackgroundImage = async () => {
+    const apiUrl = "https://source.unsplash.com/random/1600x900";
+    var response = await fetch(apiUrl);
+    var imageURL = response.url;
 
-	var quote = json.content;
-	var author = json.author;
+    bgImageElement.style.backgroundImage = `url(${imageURL})`;
+    bgImageElement.style.backgroundRepeat = "no-repeat";
+    bgImageElement.style.backgroundSize = "cover";
+};
 
-	quoteElement.innerText = quote;
-	authorElement.innerText = author;
-}
+const getQuote = async () => {
+    const apiUrl = "https://api.quotable.io/random";
+    copyQuoteIconElement.innerHTML = "<i class='fa fa-copy fa-lg'></i>";
+    copyQuoteIconElement.style.visibility = "hidden";
 
-function getTime() {
-	var currentTime = new Date();
+    var response = await fetch(apiUrl);
+    var json = await response.json();
 
-	var showDate = currentTime.toLocaleDateString("en-US", {
-		day: "numeric",
-		month: "short",
-		year: "numeric",
-	});
+    var quote = json.content;
+    var author = json.author;
 
-	var showTime = currentTime.toLocaleString("en-US", {
-		hour: "numeric",
-		minute: "numeric",
-		second: "numeric",
-		hour12: true,
-	});
+    quoteElement.innerText = quote;
+    authorElement.innerText = author;
 
-	dateElement.innerText = showDate.toString();
-	timeElement.innerText = showTime.toString();
+    copyQuoteIconElement.style.visibility = "visible";
+    copyQuoteIconElement.onclick = () => copyQuoteToClipboard();
+    copyQuoteIconElement.title = "Copy Quote to Clipboard";
+};
 
-	setInterval(getTime, 1000);
-}
+const getTime = () => {
+    var currentTime = new Date();
+
+    var showDate = currentTime.toLocaleDateString("en-US", {
+        day: "numeric",
+        month: "short",
+        year: "numeric",
+    });
+
+    var showTime = currentTime.toLocaleString("en-US", {
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
+        hour12: true,
+    });
+
+    dateElement.innerText = showDate.toString();
+    timeElement.innerText = showTime.toString();
+
+    setInterval(getTime, 1000);
+};
 
 getBackgroundImage();
 getQuote();

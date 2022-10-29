@@ -1,60 +1,64 @@
 html,
 body {
-	height: 100%;
-	font-family: monospace;
+    height: 100%;
+    font-family: monospace;
 }
 
 .main-div {
-	height: 100%;
+    height: 100%;
 }
 
 .content {
-	padding: 10px;
-	backdrop-filter: brightness(60%);
-	border-radius: 10px;
-	width: 50%;
+    padding: 10px;
+    backdrop-filter: brightness(60%);
+    border-radius: 10px;
+    width: 50%;
 }
 
 .content h1 {
-	font-size: 6em;
-	font-weight: bolder;
+    font-size: 6em;
+    font-weight: bolder;
 }
 
 .content h3 {
-	font-size: 3em;
-	font-weight: bolder;
+    font-size: 3em;
+    font-weight: bolder;
 }
 
 .quote-container p {
-	margin: 0 auto;
+    margin: 0 auto;
 }
 
 .quote-container #quote {
-	font-size: 2em;
+    font-size: 2em;
 }
 
 .quote-container #author {
-	font-size: 1.6em;
-	font-style: italic;
+    font-size: 1.6em;
+    font-style: italic;
+}
+
+#copyQuoteIcon {
+    cursor: pointer;
 }
 
 .footer {
-	position: fixed;
-	bottom: 0;
-	text-align: center;
-	width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
 }
 
 .footer h5 {
-	font-size: 1.6em;
+    font-size: 1.6em;
 }
 
 .heart {
-	color: orange;
+    color: orange;
 }
 
 .dev-name {
-	color: orange;
-	font-style: italic;
-	text-decoration: none;
+    color: orange;
+    font-style: italic;
+    text-decoration: none;
 }
