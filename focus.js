@@ -6,6 +6,7 @@ var bgImageElement = document.getElementById("unsplash-img");
 var quoteElement = document.getElementById("quote");
 var copyQuoteIconElement = document.getElementById("copyQuoteIcon");
 var authorElement = document.getElementById("author");
+var refreshQuoteIconElement = document.getElementById("refreshQuoteIcon");
 
 const copyQuoteToClipboard = () => {
     var range = document.createRange();
@@ -45,6 +46,9 @@ const getQuote = async () => {
     copyQuoteIconElement.style.visibility = "visible";
     copyQuoteIconElement.onclick = () => copyQuoteToClipboard();
     copyQuoteIconElement.title = "Copy Quote to Clipboard";
+
+    refreshQuoteIconElement.onclick = () => getQuote();
+    refreshQuoteIconElement.title = "Get new Quote";
 };
 
 const getTime = () => {

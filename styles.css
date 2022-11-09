@@ -42,6 +42,10 @@ body {
     cursor: pointer;
 }
 
+#refreshQuoteIcon {
+    cursor: pointer;
+}
+
 .footer {
     position: fixed;
     bottom: 0;

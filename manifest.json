@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Focus Tab - Dhruv Solanki",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "description": "Minimal focused new tab everytime.",
     "author": "Dhruv Solanki",
     "incognito": "split",
