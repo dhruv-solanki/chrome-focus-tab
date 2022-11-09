@@ -38,6 +38,14 @@ body {
     font-style: italic;
 }
 
+#refreshImageIcon {
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
 #copyQuoteIcon {
     cursor: pointer;
 }

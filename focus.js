@@ -3,6 +3,7 @@ var dateElement = document.getElementById("date");
 
 var bgImageElement = document.getElementById("unsplash-img");
 
+var refreshImageIconElement = document.getElementById("refreshImageIcon");
 var quoteElement = document.getElementById("quote");
 var copyQuoteIconElement = document.getElementById("copyQuoteIcon");
 var authorElement = document.getElementById("author");
@@ -20,6 +21,8 @@ const copyQuoteToClipboard = () => {
 };
 
 const getBackgroundImage = async () => {
+	refreshImageIconElement.style.visibility = "hidden";
+    
     const apiUrl = "https://source.unsplash.com/random/1600x900";
     var response = await fetch(apiUrl);
     var imageURL = response.url;
@@ -27,6 +30,10 @@ const getBackgroundImage = async () => {
     bgImageElement.style.backgroundImage = `url(${imageURL})`;
     bgImageElement.style.backgroundRepeat = "no-repeat";
     bgImageElement.style.backgroundSize = "cover";
+
+    refreshImageIconElement.style.visibility = "visible";
+	refreshImageIconElement.onclick = () => getBackgroundImage();
+	refreshImageIconElement.title = "Get new Image";
 };
 
 const getQuote = async () => {
