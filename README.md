@@ -13,5 +13,4 @@ Minimal Focused new tab everytime.
 5. It will load the plugin in your browser, now enjoy it.
 
 ### Screenshot
-1. ![Screenshot - 1](images/screenshots/ss1.png)
-2. ![Screenshot - 2](images/screenshots/ss2.png)
+![Screenshot - UI](images/screenshots/new-UI.png)
