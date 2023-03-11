@@ -1,0 +1,76 @@
+html,
+body {
+    height: 100%;
+    font-family: monospace;
+}
+
+.main-div {
+    height: 100%;
+}
+
+.content {
+    padding: 10px;
+    backdrop-filter: brightness(60%);
+    border-radius: 10px;
+    width: 50%;
+}
+
+.content h1 {
+    font-size: 6em;
+    font-weight: bolder;
+}
+
+.content h3 {
+    font-size: 3em;
+    font-weight: bolder;
+}
+
+.quote-container p {
+    margin: 0 auto;
+}
+
+.quote-container #quote {
+    font-size: 2em;
+}
+
+.quote-container #author {
+    font-size: 1.6em;
+    font-style: italic;
+}
+
+#refreshImageIcon {
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+#copyQuoteIcon {
+    cursor: pointer;
+}
+
+#refreshQuoteIcon {
+    cursor: pointer;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footer h5 {
+    font-size: 1.6em;
+}
+
+.heart {
+    color: orange;
+}
+
+.dev-name {
+    color: orange;
+    font-style: italic;
+    text-decoration: none;
+}

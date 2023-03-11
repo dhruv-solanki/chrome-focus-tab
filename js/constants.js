@@ -1,0 +1,16 @@
+export const constants = {
+    visibilityHidden: "hidden",
+    visibilityVisible: "visible",
+    bgNoRepeat: "no-repeat",
+    bgCover: "cover",
+    enUS: "en-US",
+    short: "short",
+    numeric: "numeric",
+    copyIcon: "<i class='fa fa-copy fa-lg'></i>",
+    checkIcon: "<i class='fa fa-check fa-lg'></i>",
+    refreshImageTooltip: "Get new Image",
+    refreshQuoteTooltip: "Get new Quote",
+    copyQuoteTooltip: "Copy Quote to Clipboard",
+    unsplashApiUrl: "https://source.unsplash.com/random/1600x900",
+    quoteApiUrl: "https://api.quotable.io/random",
+};
